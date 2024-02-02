@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1d2b53;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+#table {
+  background-color: #7e2553;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 40px;
+  border-radius: 8px;
+  transform: rotateX(45deg);
+}
+
+.btn:hover .card {
+  background-color: white;
+  transform: translate3d(8ch, -0.64in, 8em) scale(1.2);
+}
+.btn:nth-child(1) .card {
+  background-color: #00dfa2;
+}
+.btn:nth-child(2) .card {
+  background-color: #f6fa70;
+}
+.btn:nth-child(3) .card {
+  background-color: #ff0060;
+}
+
+.card {
+  width: 200px;
+  height: 64px;
+  border-radius: 4px;
+  background-color: black;
+  transition: transform 0.5s ease-in-out;
+}/*# sourceMappingURL=styles.css.map */

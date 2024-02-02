@@ -1,0 +1,47 @@
+@import "mixin";
+
+$main-color: #1d2b53;
+$table-color: #7e2553;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $main-color;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+#table {
+  background-color: $table-color;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 40px;
+  border-radius: 8px;
+  @include rotate(45deg);
+}
+
+$colors: (#00dfa2, #f6fa70, #ff0060);
+
+.btn {
+  &:hover {
+    @include moveForward(24px);
+  }
+  @include listColor($colors);
+}
+
+.card {
+  width: 200px;
+  height: 64px;
+  border-radius: 4px;
+  background-color: black;
+
+  transition: transform 0.5s ease-in-out;
+}
