@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 62.5%;
 }
 
 body {
@@ -17,30 +18,40 @@ body {
   background-color: #7e2553;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  padding: 40px;
+  gap: 60px;
+  padding: 60px;
   border-radius: 8px;
   transform: rotateX(45deg);
 }
 
-.btn:hover .card {
-  background-color: white;
-  transform: translate3d(8ch, -0.64in, 8em) scale(1.2);
-}
 .btn:nth-child(1) .card {
+  z-index: 2;
   background-color: #00dfa2;
 }
 .btn:nth-child(2) .card {
+  z-index: 1;
   background-color: #f6fa70;
 }
 .btn:nth-child(3) .card {
+  z-index: 0;
   background-color: #ff0060;
+}
+.btn:hover .card {
+  transform: translate3d(4ch, -0.32in, 4em) scale(1.2);
+  box-shadow: -1rem 1rem 3rem black;
+}
+.btn:active .card {
+  background-color: aliceblue;
+  transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
 }
 
 .card {
-  width: 200px;
-  height: 64px;
+  width: 124px;
+  height: 176px;
   border-radius: 4px;
   background-color: black;
-  transition: transform 0.5s ease-in-out;
+  box-shadow: -1rem 1rem 1rem -0.8rem black;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s, box-shadow 0.5s ease-in-out;
 }/*# sourceMappingURL=styles.css.map */
