@@ -1,15 +1,8 @@
-@mixin moveForward($distance) {
-  .card {
-    transform: translate3d(4ch, -0.32in, 4em) scale(1.2);
-    box-shadow: -1rem 1rem 3rem black;
-  }
-}
-
 @mixin rotate($deg) {
   transform: rotateX($deg);
 }
 
-@mixin cardList($colors) {
+@mixin listCard($colors) {
   $len: length($colors);
   @for $i from 1 through $len {
     &:nth-child(#{$i}) .card {
@@ -23,4 +16,18 @@
 @mixin sizeCard($scale) {
   width: 62px * $scale;
   height: 88px * $scale;
+}
+
+@mixin hoverCard() {
+  .card {
+    transform: translate3d(4ch, -0.32in, 4em) scale(1.2);
+    box-shadow: -1rem 1rem 3rem black;
+  }
+}
+
+@mixin openCard(){
+  .card {
+    background-color: aliceblue;
+    transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
+  }
 }

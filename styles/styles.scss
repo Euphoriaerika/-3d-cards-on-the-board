@@ -33,15 +33,12 @@ body {
 $colors: (#00dfa2, #f6fa70, #ff0060);
 
 .btn {
-  @include cardList($colors);
+  @include listCard($colors);
   &:hover {
-    @include moveForward(24px);
+    @include hoverCard();
   }
   &:active {
-    .card {
-      background-color: aliceblue;
-      transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
-    }
+    @include openCard();
   }
 }
 
