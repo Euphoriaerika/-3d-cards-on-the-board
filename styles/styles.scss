@@ -1,7 +1,9 @@
 @import "mixin";
 
-$main-color: #1d2b53;
-$table-color: #7e2553;
+$main-color: #2d3250;
+$table-color: #424769;
+$card-color: #7077a1;
+$text-color: #f6b17a;
 $gap: 60px;
 
 * {
@@ -30,10 +32,8 @@ body {
   @include rotate(45deg);
 }
 
-$colors: (#00dfa2, #f6fa70, #ff0060);
-
 .btn {
-  @include listCard($colors);
+  cursor: pointer;
   &:hover {
     @include hoverCard();
   }
@@ -43,13 +43,40 @@ $colors: (#00dfa2, #f6fa70, #ff0060);
 }
 
 .card {
-  @include sizeCard(2);
+  @include sizeCard(4);
   border-radius: 4px;
 
-  background-color: black;
-  box-shadow: -1rem 1rem 1rem -0.8rem black;
+  background-color: $card-color;
+  color: $text-color;
+  box-shadow: 0 0 0.8rem 0.2rem $text-color;
 
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.5s, box-shadow 0.5s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .blank {
+    background-color: transparent;
+    border: 1px solid $text-color;
+    width: 92%;
+    height: 92%;
+
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    text-align: center;
+    .icon {
+      width: 80%;
+      height: 80%;
+      fill: $text-color;
+      margin: auto;
+    }
+    p {
+      border-top: 1px solid $text-color;
+      padding-top: 8%;
+      font-size: 1.2rem;
+    }
+  }
 }
