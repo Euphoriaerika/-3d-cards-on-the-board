@@ -6,6 +6,10 @@
 }
 
 body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  overflow: hidden;
   background-color: #2d3250;
   height: 100vh;
   display: flex;
