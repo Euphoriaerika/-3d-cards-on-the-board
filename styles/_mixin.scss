@@ -2,16 +2,6 @@
   transform: rotateX($deg);
 }
 
-@mixin listCard($colors) {
-  $len: length($colors);
-  @for $i from 1 through $len {
-    &:nth-child(#{$i}) .card {
-      z-index: $len - $i;
-      background-color: nth($colors, $i);
-    }
-  }
-}
-
 // standard size of playing card: 62x88
 @mixin sizeCard($scale) {
   width: 62px * $scale;
@@ -21,11 +11,11 @@
 @mixin hoverCard() {
   .card {
     transform: translate3d(4ch, -0.32in, 4em) scale(1.2);
-    box-shadow: -1rem 1rem 3rem black;
+    box-shadow: 0 0 1rem 0.8rem $text-color;
   }
 }
 
-@mixin openCard(){
+@mixin openCard() {
   .card {
     background-color: aliceblue;
     transform: rotateX(4deg) rotateY(180deg) rotateZ(0);

@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #1d2b53;
+  background-color: #2d3250;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@ body {
 }
 
 #table {
-  background-color: #7e2553;
+  background-color: #424769;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
@@ -24,21 +24,12 @@ body {
   transform: rotateX(45deg);
 }
 
-.btn:nth-child(1) .card {
-  z-index: 2;
-  background-color: #00dfa2;
-}
-.btn:nth-child(2) .card {
-  z-index: 1;
-  background-color: #f6fa70;
-}
-.btn:nth-child(3) .card {
-  z-index: 0;
-  background-color: #ff0060;
+.btn {
+  cursor: pointer;
 }
 .btn:hover .card {
   transform: translate3d(4ch, -0.32in, 4em) scale(1.2);
-  box-shadow: -1rem 1rem 3rem black;
+  box-shadow: 0 0 1rem 0.8rem #f6b17a;
 }
 .btn:active .card {
   background-color: aliceblue;
@@ -46,12 +37,36 @@ body {
 }
 
 .card {
-  width: 124px;
-  height: 176px;
+  width: 248px;
+  height: 352px;
   border-radius: 4px;
-  background-color: black;
-  box-shadow: -1rem 1rem 1rem -0.8rem black;
+  background-color: #7077a1;
+  color: #f6b17a;
+  box-shadow: 0 0 0.8rem 0.2rem #f6b17a;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.5s, box-shadow 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .blank {
+  background-color: transparent;
+  border: 1px solid #f6b17a;
+  width: 92%;
+  height: 92%;
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+  text-align: center;
+}
+.card .blank .icon {
+  width: 80%;
+  height: 80%;
+  fill: #f6b17a;
+  margin: auto;
+}
+.card .blank p {
+  border-top: 1px solid #f6b17a;
+  padding-top: 8%;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=styles.css.map */
