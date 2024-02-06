@@ -1,4 +1,4 @@
-# JavaScript Image Slider
+# Mystic Sights
 
 This project is a website featuring animated cards with minimalist design, implemented using HTML, CSS, JS, and SASS. Please note that the site is currently not optimized for mobile devices.
 
