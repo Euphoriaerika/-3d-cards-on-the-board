@@ -24,12 +24,12 @@ body {
   perspective: 1000px;
 }
 
-.icon {
-  width: auto;
-  height: 80%;
+svg,
+svg path {
   fill: $text-color;
-  margin: auto;
 }
+
+/* tabel card section */
 
 #table {
   background-color: $table-color;
@@ -67,6 +67,11 @@ body {
     height: 92%;
     position: absolute;
     backface-visibility: hidden;
+    .icon {
+      width: auto;
+      height: 80%;
+      margin: auto;
+    }
   }
 
   .card-front {
@@ -102,4 +107,18 @@ body {
 .btn.active .card {
   transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
   box-shadow: 0 0 0.8rem 0.2rem $text-color;
+}
+
+/* reload btn section */
+
+#btn-reload {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 4em;
+  right: 4em;
+  svg {
+    width: 40px;
+    height: 40px;
+  }
 }
