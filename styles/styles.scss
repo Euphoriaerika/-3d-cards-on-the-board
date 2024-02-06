@@ -43,12 +43,6 @@ body {
 
 .btn {
   cursor: pointer;
-  &:hover {
-    @include hoverCard();
-  }
-  &:active {
-    @include openCard();
-  }
 }
 
 .card {
@@ -98,4 +92,14 @@ body {
       font-size: 1.2rem;
     }
   }
+}
+
+.btn:hover .card {
+  transform: translate3d(4ch, -0.32in, 4em) scale(1.2);
+  box-shadow: 0 0 1rem 0.8rem $text-color;
+}
+
+.btn.active .card {
+  transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
+  box-shadow: 0 0 0.8rem 0.2rem $text-color;
 }
