@@ -85,6 +85,6 @@ body {
 }
 .card .card-back p {
   border-top: 2px solid #f6b17a;
-  padding-top: 8%;
+  padding: 8% 16px;
   font-size: 1.2rem;
 }/*# sourceMappingURL=styles.css.map */
