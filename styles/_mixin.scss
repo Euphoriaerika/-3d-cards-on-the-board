@@ -7,16 +7,3 @@
   width: 62px * $scale;
   height: 88px * $scale;
 }
-
-@mixin hoverCard() {
-  .card {
-    transform: translate3d(4ch, -0.32in, 4em) scale(1.2);
-    box-shadow: 0 0 1rem 0.8rem $text-color;
-  }
-}
-
-@mixin openCard() {
-  .card {
-    transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
-  }
-}

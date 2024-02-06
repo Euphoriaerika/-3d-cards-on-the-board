@@ -38,13 +38,6 @@ body {
 .btn {
   cursor: pointer;
 }
-.btn:hover .card {
-  transform: translate3d(4ch, -0.32in, 4em) scale(1.2);
-  box-shadow: 0 0 1rem 0.8rem #f6b17a;
-}
-.btn:active .card {
-  transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
-}
 
 .card {
   width: 248px;
@@ -87,4 +80,14 @@ body {
   border-top: 2px solid #f6b17a;
   padding: 8% 16px;
   font-size: 1.2rem;
+}
+
+.btn:hover .card {
+  transform: translate3d(4ch, -0.32in, 4em) scale(1.2);
+  box-shadow: 0 0 1rem 0.8rem #f6b17a;
+}
+
+.btn.active .card {
+  transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
+  box-shadow: 0 0 0.8rem 0.2rem #f6b17a;
 }/*# sourceMappingURL=styles.css.map */
