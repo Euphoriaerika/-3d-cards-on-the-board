@@ -22,6 +22,13 @@ body {
   perspective: 1000px;
 }
 
+.icon {
+  width: auto;
+  height: 80%;
+  fill: $text-color;
+  margin: auto;
+}
+
 #table {
   background-color: $table-color;
   display: grid;
@@ -58,23 +65,33 @@ body {
   justify-content: center;
   align-items: center;
 
-  .blank {
-    background-color: transparent;
-    border: 1px solid $text-color;
+  .card-front,
+  .card-back {
     width: 92%;
     height: 92%;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  .card-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      height: 40%;
+    }
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+    background-color: transparent;
+    border: 2px solid $text-color;
 
     display: grid;
     grid-template-rows: repeat(2, 50%);
     text-align: center;
-    .icon {
-      width: 80%;
-      height: 80%;
-      fill: $text-color;
-      margin: auto;
-    }
     p {
-      border-top: 1px solid $text-color;
+      border-top: 2px solid $text-color;
       padding-top: 8%;
       font-size: 1.2rem;
     }

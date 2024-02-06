@@ -14,6 +14,13 @@ body {
   perspective: 1000px;
 }
 
+.icon {
+  width: auto;
+  height: 80%;
+  fill: #f6b17a;
+  margin: auto;
+}
+
 #table {
   background-color: #424769;
   display: grid;
@@ -32,7 +39,6 @@ body {
   box-shadow: 0 0 1rem 0.8rem #f6b17a;
 }
 .btn:active .card {
-  background-color: aliceblue;
   transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
 }
 
@@ -50,23 +56,31 @@ body {
   justify-content: center;
   align-items: center;
 }
-.card .blank {
-  background-color: transparent;
-  border: 1px solid #f6b17a;
+.card .card-front,
+.card .card-back {
   width: 92%;
   height: 92%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.card .card-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .card-front .icon {
+  height: 40%;
+}
+.card .card-back {
+  transform: rotateY(180deg);
+  background-color: transparent;
+  border: 2px solid #f6b17a;
   display: grid;
   grid-template-rows: repeat(2, 50%);
   text-align: center;
 }
-.card .blank .icon {
-  width: 80%;
-  height: 80%;
-  fill: #f6b17a;
-  margin: auto;
-}
-.card .blank p {
-  border-top: 1px solid #f6b17a;
+.card .card-back p {
+  border-top: 2px solid #f6b17a;
   padding-top: 8%;
   font-size: 1.2rem;
 }/*# sourceMappingURL=styles.css.map */

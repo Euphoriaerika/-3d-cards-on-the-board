@@ -17,7 +17,6 @@
 
 @mixin openCard() {
   .card {
-    background-color: aliceblue;
     transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
   }
 }
