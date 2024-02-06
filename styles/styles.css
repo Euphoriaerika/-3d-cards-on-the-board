@@ -18,13 +18,12 @@ body {
   perspective: 1000px;
 }
 
-.icon {
-  width: auto;
-  height: 80%;
+svg,
+svg path {
   fill: #f6b17a;
-  margin: auto;
 }
 
+/* tabel card section */
 #table {
   background-color: #424769;
   display: grid;
@@ -60,6 +59,12 @@ body {
   position: absolute;
   backface-visibility: hidden;
 }
+.card .card-front .icon,
+.card .card-back .icon {
+  width: auto;
+  height: 80%;
+  margin: auto;
+}
 .card .card-front {
   display: flex;
   align-items: center;
@@ -90,4 +95,17 @@ body {
 .btn.active .card {
   transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
   box-shadow: 0 0 0.8rem 0.2rem #f6b17a;
+}
+
+/* reload btn section */
+#btn-reload {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 4em;
+  right: 4em;
+}
+#btn-reload svg {
+  width: 40px;
+  height: 40px;
 }/*# sourceMappingURL=styles.css.map */
