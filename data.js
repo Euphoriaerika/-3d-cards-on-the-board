@@ -22,7 +22,7 @@ var cardData = {
 };
 
 function createAndAppendCards(cardData, num) {
-  // Функція для створення елементів за шаблоном та заповнення даними
+  // Function for creating elements based on a template and populating them with data
   function createCardElement(cardId, cardText) {
     var cardContainer = document.createElement("div");
     cardContainer.className = "btn";
@@ -30,6 +30,7 @@ function createAndAppendCards(cardData, num) {
     var card = document.createElement("div");
     card.className = "card";
 
+    // Creating the front side of the card
     var cardFront = document.createElement("div");
     cardFront.className = "card-front";
     var cardFrontImage = document.createElement("img");
@@ -38,6 +39,7 @@ function createAndAppendCards(cardData, num) {
     cardFrontImage.alt = "prediction card";
     cardFront.appendChild(cardFrontImage);
 
+    // Creating the back side of the card
     var cardBack = document.createElement("div");
     cardBack.className = "card-back";
     var cardBackImage = document.createElement("img");
@@ -55,7 +57,8 @@ function createAndAppendCards(cardData, num) {
 
     return cardContainer;
   }
-  //генератор випадкових карток де req - це кількість необхідних елементів, а cardData - маисв даних, для визначення його розміру
+
+  // Random card generator function where 'req' is the number of required elements, and 'cardData' is an array to determine its size
   function randomСardGenerator(cardData, req) {
     let numElement = Object.keys(cardData).length;
     var randomCards = [];
@@ -70,13 +73,14 @@ function createAndAppendCards(cardData, num) {
   var mainElement = document.getElementById("table");
   Cards = randomСardGenerator(cardData, num);
 
+  // Append each card element to the main container
   Cards.forEach(function (cardId) {
     var cardElement = createCardElement(cardId, cardData[cardId]);
     mainElement.appendChild(cardElement);
   });
 }
 
-// Викликайте функцію з app.js, яка буде створювати та додавати карти до <main>
+// Call the function from app.js to create and add cards to <main>
 createAndAppendCards(cardData, 3);
 /* icon change color */
 window.addEventListener("load", function () {
