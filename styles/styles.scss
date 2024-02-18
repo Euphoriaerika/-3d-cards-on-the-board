@@ -111,14 +111,20 @@ svg path {
 
 /* reload btn section */
 
-#btn-reload {
+.btn-menu {
   width: 40px;
   height: 40px;
   position: absolute;
   top: 4em;
-  right: 4em;
   svg {
     width: 40px;
     height: 40px;
   }
+}
+
+#btn-reload {
+  right: 4em;
+}
+#btn-save {
+  right: 16em;
 }

@@ -8,12 +8,25 @@
     <link rel="icon" type="image/x-icon" href="./image/favicon/favicon.svg" />
   </head>
   <body>
-    <div id="btn-reload" onclick="window.location.reload()">
+    <main id="table"></main>
+
+    <div
+      id="btn-reload"
+      class="btn btn-menu"
+      onclick="window.location.reload()"
+    >
       <img class="icon" src="./image/reload.svg" alt="reload-btn" />
     </div>
-    <main id="table"></main>
+    <div id="btn-save" class="btn btn-menu" onclick="captureTable()">
+      <img class="icon" src="./image/save.svg" alt="reload-btn" />
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="./component/imageCapture.js"></script>
+
     <script src="//cdn.jsdelivr.net/npm/desvg@1.0.2/desvg.min.js"></script>
-    <script src="./data.js"></script>
+    <script src="./component/data.js"></script>
+
     <script src="./app.js"></script>
   </body>
 </html>
