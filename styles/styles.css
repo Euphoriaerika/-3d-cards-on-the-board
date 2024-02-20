@@ -75,16 +75,16 @@ svg path {
 }
 .card .card-back {
   transform: rotateY(180deg);
-  background-color: transparent;
   border: 2px solid #f6b17a;
   display: grid;
   grid-template-rows: repeat(2, 50%);
-  text-align: center;
+  align-items: center;
 }
 .card .card-back p {
   border-top: 2px solid #f6b17a;
   padding: 8% 16px;
   font-size: 1.6rem;
+  text-align: center;
 }
 
 .btn:hover .card {
@@ -102,7 +102,7 @@ svg path {
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 4em;
+  top: 2.8vh;
 }
 .btn-menu svg {
   width: 40px;
@@ -110,9 +110,9 @@ svg path {
 }
 
 #btn-reload {
-  right: 4em;
+  right: 2.8vh;
 }
 
 #btn-save {
-  right: 16em;
+  right: calc(2.8vh + 60px);
 }/*# sourceMappingURL=styles.css.map */
