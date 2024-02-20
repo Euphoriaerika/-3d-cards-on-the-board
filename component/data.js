@@ -84,7 +84,8 @@ function createAndAppendCards(cardData, num) {
 
 // Call the function from app.js to create and add cards to <main>
 createAndAppendCards(cardData, 3);
-/* icon change color */
+
+// Icon change color
 window.addEventListener("load", function () {
   deSVG(".icon", true);
 });

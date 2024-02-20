@@ -8,8 +8,10 @@
     <link rel="icon" type="image/x-icon" href="./image/favicon/favicon.svg" />
   </head>
   <body>
+    <!-- Main element of the site where cards with predictions are generated -->
     <main id="table"></main>
 
+    <!-- Buttons for refreshing the page and saving resulting cards as images -->
     <div
       id="btn-reload"
       class="btn btn-menu"
@@ -21,13 +23,17 @@
       <img class="icon" src="./image/save.svg" alt="reload-btn" />
     </div>
 
+    <!-- Scripts for loading the resulting card list image -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rasterizehtml/1.2.8/rasterizeHTML.allinone.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
     <script src="./component/imageCapture.js"></script>
 
+    <!-- Helps import SVG images directly into the code for correct color rendering -->
     <script src="//cdn.jsdelivr.net/npm/desvg@1.0.2/desvg.min.js"></script>
+    <!-- Generates three prediction cards based on image data from the cards folder and corresponding prediction text -->
     <script src="./component/data.js"></script>
 
+    <!-- Key script of the project containing interaction scripts for menu elements, cards, animations, etc. -->
     <script src="./app.js"></script>
   </body>
 </html>

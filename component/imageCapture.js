@@ -1,20 +1,20 @@
 function captureTable() {
-  // Вибрати ваш елемент таблиці
+  // Select your table element
   var tableElement = document.getElementById("table");
 
-  // Викликати Dom-to-Image для створення зображення
+  // Call Dom-to-Image to create an image
   domtoimage.toPng(tableElement)
     .then(function (dataUrl) {
-      // Отримати зображення у вигляді base64-рядка
+      // Get the image as a base64 string
       const imgData = dataUrl;
 
-      // Створити посилання для завантаження зображення
+      // Create a link to download the image
       const downloadLink = document.createElement("a");
       downloadLink.href = imgData;
       downloadLink.download = "table_image.png";
-      downloadLink.click(); // Спрацьовує клік на посилання для завантаження
+      downloadLink.click(); // Triggers a click on the link to initiate the download
     })
     .catch(function (error) {
-      console.error('Помилка Dom-to-Image:', error);
+      console.error('Dom-to-Image Error:', error);
     });
 }
