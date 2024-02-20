@@ -1,9 +1,15 @@
+// Connect the audio file
 // Add an event listener to each element with the class 'btn'
 document.querySelectorAll(".btn-card").forEach(function (btn) {
   // Add the 'active' class when a button is clicked
   btn.addEventListener("click", function () {
-    this.classList.add("active"); // Сan be changed to 'toggle' for a cool flip card animation
-    checkAllButtons();
+    if (!this.classList.contains("active")) {
+      this.classList.add("active"); // Сan be changed to 'toggle' for a cool flip card animation
+      // Play the sound when the button is clicked
+      new Audio("./sounds/flip.mp3").play();
+
+      checkAllButtons();
+    }
   });
 });
 
@@ -21,13 +27,17 @@ function checkAllButtons() {
   // If all cards are open, the button to download the resulting image should appear
   // Also, to resolve issues with domtoimage, the front card image is removed
   if (allButtonsActive) {
+    tableElement.classList.add("rotate-animation");
+
     setTimeout(() => {
       toggleFontCard(true);
-      btnSave.classList.remove("hidden");
       tableElement.classList.add("wave-animation");
-    }, 1000); // Delay set to 500ms to make the front card image disappear after the card rotation animation
-    tableElement.classList.add("rotate-animation");
-    setTimeout(() => tableElement.classList.remove("wave-animation"), 4000);
+    }, 1000); // Delay set to 1000ms to make the front card image disappear after the card rotation animation
+
+    setTimeout(() => {
+      tableElement.classList.remove("wave-animation");
+      btnSave.classList.remove("hidden");
+    }, 4000); // The delay is set taking into account the previous delay and the wave animation, which lasts for 3 seconds
   } else {
     btnSave.classList.add("hidden");
     toggleFontCard(false);

@@ -469,6 +469,10 @@ svg path {
     opacity: 0.04;
     background: linear-gradient(45deg, transparent 0%, #f6b17a calc(98 * 1%), transparent 100%);
   }
+  99% {
+    opacity: 0.02;
+    background: linear-gradient(45deg, transparent 0%, #f6b17a calc(99 * 1%), transparent 100%);
+  }
 }
 
 .card {
@@ -553,4 +557,16 @@ svg path {
 
 #btn-save {
   right: calc(2.8vh + 60px);
+}
+
+#btn-save:not(:hover)::before {
+  content: "";
+  border-radius: 50%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  z-index: -2;
+  animation: waveAnimation 3s ease-in-out infinite;
 }/*# sourceMappingURL=styles.css.map */
