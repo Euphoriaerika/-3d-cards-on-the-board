@@ -11,7 +11,7 @@ function captureTable() {
       // Create a link to download the image
       const downloadLink = document.createElement("a");
       downloadLink.href = imgData;
-      downloadLink.download = "table_image.png";
+      downloadLink.download = "my_prediction.png";
       downloadLink.click(); // Triggers a click on the link to initiate the download
     })
     .catch(function (error) {
