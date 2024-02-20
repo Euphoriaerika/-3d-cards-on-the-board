@@ -42,10 +42,12 @@ function createAndAppendCards(cardData, num) {
     // Creating the back side of the card
     var cardBack = document.createElement("div");
     cardBack.className = "card-back";
-    var cardBackImage = document.createElement("img");
-    cardBackImage.className = "icon";
-    cardBackImage.src = "./image/cards/" + cardId + ".svg";
-    cardBackImage.alt = "prediction card";
+    var cardBackImage = document.createElement("div");
+    var cardBackIcon = document.createElement("img");
+    cardBackIcon.className = "icon";
+    cardBackIcon.src = "./image/cards/" + cardId + ".svg";
+    cardBackIcon.alt = "prediction card";
+    cardBackImage.appendChild(cardBackIcon);
     var cardBackText = document.createElement("p");
     cardBackText.textContent = cardText;
     cardBack.appendChild(cardBackImage);
