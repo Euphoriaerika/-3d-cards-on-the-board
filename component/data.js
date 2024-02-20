@@ -25,7 +25,7 @@ function createAndAppendCards(cardData, num) {
   // Function for creating elements based on a template and populating them with data
   function createCardElement(cardId, cardText) {
     var cardContainer = document.createElement("div");
-    cardContainer.className = "btn";
+    cardContainer.className = "btn btn-card";
 
     var card = document.createElement("div");
     card.className = "card";
