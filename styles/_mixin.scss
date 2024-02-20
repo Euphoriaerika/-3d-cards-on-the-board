@@ -7,3 +7,31 @@
   width: 62px * $scale;
   height: 88px * $scale;
 }
+
+@mixin waveAnimation {
+  $steps: 100;
+
+  @for $i from 0 to $steps - 1 {
+    @if $i < $steps / 2 {
+      #{$i * calc(100 / $steps)}% {
+        opacity: #{0 + 2 * $i / $steps};
+        background: linear-gradient(
+          45deg,
+          transparent 0%,
+          #{$text-color} calc(#{$i} * 1%),
+          transparent 100%
+        );
+      }
+    } @else {
+      #{$i * calc(100 / $steps)}% {
+        opacity: #{2 - 2 * $i / $steps};
+        background: linear-gradient(
+          45deg,
+          transparent 0%,
+          #{$text-color} calc(#{$i} * 1%),
+          transparent 100%
+        );
+      }
+    }
+  }
+}
