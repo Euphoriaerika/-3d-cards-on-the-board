@@ -527,6 +527,7 @@ svg path {
 }
 .card .card-back div .icon {
   height: 80%;
+  max-width: 100%;
 }
 
 .btn:hover .card {
