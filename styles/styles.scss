@@ -4,6 +4,8 @@ $main-color: #2d3250;
 $table-color: #424769;
 $card-color: #7077a1;
 $text-color: #f6b17a;
+$great-pred-color: #dcffb7;
+$bad-pred-color: #ff6868;
 $gap: 60px;
 $gap1200: 40px;
 $gap700: 20px;
@@ -163,10 +165,20 @@ svg path {
 
 .btn.active .card {
   transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
-  box-shadow: 0 0 0.8rem 0.2rem $text-color;
+  box-shadow: 0 0 0.8rem 0.2rem $text-color; /* Default prediction */
 }
 
-/* reload btn section */
+/* Changes the shadow color of the card when it's a great prediction */
+.btn.active .great {
+  box-shadow: 0 0 0.8rem 0.2rem $great-pred-color;
+}
+
+/* Changes the shadow color of the card when it's a bad prediction */
+.btn.active .bad {
+  box-shadow: 0 0 0.8rem 0.2rem $bad-pred-color;
+}
+
+/* menu btn section */
 
 .btn-menu {
   width: 40px;

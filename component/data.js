@@ -1,34 +1,54 @@
 var cardData = {
-  "card-1":
-    "Embrace the uncertainty ahead, for within this chaos may lie the key to new opportunities.",
-  "card-2":
-    "Preserve your resources and brace yourself for potential financial challenges that may arise in the near future.",
-  "card-3":
-    "The winds of change are whispering around you; stay attuned to the subtle shifts, as they may guide you towards unexpected transformations.",
-  "card-4":
-    "Trust your instincts as you navigate through a period of ambiguity; your intuition holds the power to illuminate the path ahead.",
-  "card-5":
-    "Be mindful of interpersonal dynamics, as conflicts may arise – seek understanding and compromise to maintain harmony.",
-  "card-6":
-    "The veil of mystery shrouds your personal relationships; embrace communication and vulnerability to strengthen the bonds that matter.",
-  "card-7":
-    "A creative spark is ready to ignite within you; channel your inspiration and let your imaginative endeavors flourish.",
-  "card-8":
-    "Guard your health and well-being, for unseen challenges may test your resilience – prioritize self-care and balance.",
-  "card-9":
-    "Unexpected opportunities may knock on your door; be open to serendipity and seize the chances that align with your true aspirations.",
-  "card-10":
-    "Your journey may encounter detours, but each diversion carries valuable lessons – embrace the twists and turns with resilience and adaptability.",
+  "card-1": {
+    text: "Embrace the uncertainty ahead, for within this chaos may lie the key to new opportunities.",
+    prediction: "great",
+  },
+  "card-2": {
+    text: "Preserve your resources and brace yourself for potential financial challenges that may arise in the near future.",
+    prediction: "bad",
+  },
+  "card-3": {
+    text: "The winds of change are whispering around you; stay attuned to the subtle shifts, as they may guide you towards unexpected transformations.",
+    prediction: null,
+  },
+  "card-4": {
+    text: "Trust your instincts as you navigate through a period of ambiguity; your intuition holds the power to illuminate the path ahead.",
+    prediction: "great",
+  },
+  "card-5": {
+    text: "Be mindful of interpersonal dynamics, as conflicts may arise – seek understanding and compromise to maintain harmony.",
+    prediction: "bad",
+  },
+  "card-6": {
+    text: "The veil of mystery shrouds your personal relationships; embrace communication and vulnerability to strengthen the bonds that matter.",
+    prediction: "great",
+  },
+  "card-7": {
+    text: "A creative spark is ready to ignite within you; channel your inspiration and let your imaginative endeavors flourish.",
+    prediction: null,
+  },
+  "card-8": {
+    text: "Guard your health and well-being, for unseen challenges may test your resilience – prioritize self-care and balance.",
+    prediction: "great",
+  },
+  "card-9": {
+    text: "Unexpected opportunities may knock on your door; be open to serendipity and seize the chances that align with your true aspirations.",
+    prediction: null,
+  },
+  "card-10": {
+    text: "Your journey may encounter detours, but each diversion carries valuable lessons – embrace the twists and turns with resilience and adaptability.",
+    prediction: "bad",
+  },
 };
 
 function createAndAppendCards(cardData, num) {
   // Function for creating elements based on a template and populating them with data
-  function createCardElement(cardId, cardText) {
+  function createCardElement(cardId, cardData) {
     var cardContainer = document.createElement("div");
     cardContainer.classList.add("btn", "btn-card");
 
     var card = document.createElement("div");
-    card.classList.add("card");
+    card.classList.add("card", cardData.prediction);
 
     // Creating the front side of the card
     var cardFront = document.createElement("div");
@@ -49,7 +69,7 @@ function createAndAppendCards(cardData, num) {
     cardBackIcon.alt = "prediction card";
     cardBackImage.appendChild(cardBackIcon);
     var cardBackText = document.createElement("p");
-    cardBackText.textContent = cardText;
+    cardBackText.textContent = cardData.text;
     cardBack.appendChild(cardBackImage);
     cardBack.appendChild(cardBackText);
 

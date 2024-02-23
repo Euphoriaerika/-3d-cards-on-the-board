@@ -536,10 +536,20 @@ svg path {
 
 .btn.active .card {
   transform: rotateX(4deg) rotateY(180deg) rotateZ(0);
-  box-shadow: 0 0 0.8rem 0.2rem #f6b17a;
+  box-shadow: 0 0 0.8rem 0.2rem #f6b17a; /* Default prediction */
 }
 
-/* reload btn section */
+/* Changes the shadow color of the card when it's a great prediction */
+.btn.active .great {
+  box-shadow: 0 0 0.8rem 0.2rem #dcffb7;
+}
+
+/* Changes the shadow color of the card when it's a bad prediction */
+.btn.active .bad {
+  box-shadow: 0 0 0.8rem 0.2rem #ff6868;
+}
+
+/* menu btn section */
 .btn-menu {
   width: 40px;
   height: 40px;
