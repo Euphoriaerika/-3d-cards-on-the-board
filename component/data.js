@@ -1,42 +1,66 @@
 var cardData = {
   "card-1": {
-    text: "Embrace the uncertainty ahead, for within this chaos may lie the key to new opportunities.",
-    prediction: "great",
+    text: "You are on the path of great adventures and learning. Be ready for challenges, but your strength and friends will help you overcome any obstacles.",
+    prediction: null,
   },
   "card-2": {
-    text: "Preserve your resources and brace yourself for potential financial challenges that may arise in the near future.",
+    text: "Beware of impressions and deceit. Avoid dubious connections to safeguard your emotional well-being.",
     prediction: "bad",
   },
   "card-3": {
-    text: "The winds of change are whispering around you; stay attuned to the subtle shifts, as they may guide you towards unexpected transformations.",
+    text: "Your energy and passion can be beneficial in your life. Use them to achieve your goals.",
     prediction: null,
   },
   "card-4": {
-    text: "Trust your instincts as you navigate through a period of ambiguity; your intuition holds the power to illuminate the path ahead.",
-    prediction: "great",
-  },
-  "card-5": {
-    text: "Be mindful of interpersonal dynamics, as conflicts may arise – seek understanding and compromise to maintain harmony.",
+    text: "Be cautious in your interpersonal relationships. Preserve your trust and avoid situations that may harm you.",
     prediction: "bad",
   },
-  "card-6": {
-    text: "The veil of mystery shrouds your personal relationships; embrace communication and vulnerability to strengthen the bonds that matter.",
+  "card-5": {
+    text: "Your creativity and abilities will lead to great achievements. With the magic wand, you can perform wonders.",
     prediction: "great",
   },
-  "card-7": {
-    text: "A creative spark is ready to ignite within you; channel your inspiration and let your imaginative endeavors flourish.",
+  "card-6": {
+    text: "Use wisdom and abilities to understand the future. Maintain a balance between planning and dealing with unexpected circumstances.",
     prediction: null,
   },
+  "card-7": {
+    text: "Avoid situations that may lead to risky decisions. Be careful in your interactions and avoid subconscious dangers.",
+    prediction: "bad",
+  },
   "card-8": {
-    text: "Guard your health and well-being, for unseen challenges may test your resilience – prioritize self-care and balance.",
-    prediction: "great",
+    text: "Carefully plan your next move. It's a time of changes, and your readiness for them will determine your success.",
+    prediction: null,
   },
   "card-9": {
-    text: "Unexpected opportunities may knock on your door; be open to serendipity and seize the chances that align with your true aspirations.",
+    text: "Small joys and unexpected surprises will make your life more interesting and enjoyable.",
     prediction: null,
   },
   "card-10": {
-    text: "Your journey may encounter detours, but each diversion carries valuable lessons – embrace the twists and turns with resilience and adaptability.",
+    text: "Avoid close ties or situations that may limit your freedom and independence.",
+    prediction: "bad",
+  },
+  "card-11": {
+    text: "Enjoy the coziness and joyful moments around you. Warm your heart with the comfort of Christmas socks.",
+    prediction: null,
+  },
+  "card-12": {
+    text: "Your creativity and talent will reveal new opportunities and contribute to creative growth.",
+    prediction: "great",
+  },
+  "card-13": {
+    text: "Be cautious in your surroundings. Avoid negative influences and individuals who may harm your emotional stability.",
+    prediction: "bad",
+  },
+  "card-14": {
+    text: "Take life seriously, avoid risky situations, and maintain your health.",
+    prediction: "bad",
+  },
+  "card-15": {
+    text: "Your efforts and decisions will prove powerful and beneficial. Strive for achievements and development.",
+    prediction: "great",
+  },
+  "card-16": {
+    text: "Be cautious in your choices and decisions, as some situations may have negative consequences for you.",
     prediction: "bad",
   },
 };
