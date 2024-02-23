@@ -545,6 +545,7 @@ svg path {
   height: 40px;
   position: absolute;
   top: 2.8vh;
+  z-index: 100;
 }
 .btn-menu svg {
   width: 40px;
@@ -569,4 +570,40 @@ svg path {
   left: -2px;
   z-index: -2;
   animation: waveAnimation 3s ease-in-out infinite;
+}
+
+/* MEDIA SECTION */
+@media screen and (max-width: 1200px) {
+  #table {
+    gap: 40px;
+    padding: 40px;
+  }
+  .card {
+    width: 148.8px;
+    height: 211.2px;
+  }
+  .card .card-back p {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #table {
+    gap: 20px;
+    padding: 20px;
+  }
+  .card {
+    width: 99.2px;
+    height: 140.8px;
+  }
+  .card .card-back p {
+    font-size: 0.68rem;
+    padding: 4px;
+  }
+}
+@media screen and (max-width: 300px) {
+  #table {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -5,6 +5,8 @@ $table-color: #424769;
 $card-color: #7077a1;
 $text-color: #f6b17a;
 $gap: 60px;
+$gap1200: 40px;
+$gap700: 20px;
 
 * {
   box-sizing: border-box;
@@ -171,6 +173,9 @@ svg path {
   height: 40px;
   position: absolute;
   top: 2.8vh;
+
+  z-index: 100;
+
   svg {
     width: 40px;
     height: 40px;
@@ -196,4 +201,40 @@ svg path {
   z-index: -2;
 
   animation: waveAnimation 3s ease-in-out infinite;
+}
+
+/* MEDIA SECTION */
+
+@media screen and (max-width: 1200px) {
+  #table {
+    gap: $gap1200;
+    padding: $gap1200;
+  }
+  .card {
+    @include sizeCard(2.4);
+    .card-back p {
+      font-size: 1rem;
+      padding: 8px;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  #table {
+    gap: $gap700;
+    padding: $gap700;
+  }
+  .card {
+    @include sizeCard(1.6);
+    .card-back p {
+      font-size: 0.68rem;
+      padding: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #table {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
