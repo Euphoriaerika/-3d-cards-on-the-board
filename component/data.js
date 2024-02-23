@@ -63,6 +63,10 @@ var cardData = {
     text: "Be cautious in your choices and decisions, as some situations may have negative consequences for you.",
     prediction: "bad",
   },
+  "card-17": {
+    text: 'Denchik, the Afro-American tanker, says: "My tank is so big that when I stop in the city, people think it\'s a new urban art installation!"',
+    prediction: "great",
+  },
 };
 
 function createAndAppendCards(cardData, num) {
