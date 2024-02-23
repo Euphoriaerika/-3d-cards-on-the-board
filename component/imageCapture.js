@@ -9,7 +9,7 @@ function captureTable() {
       const imgData = dataUrl;
 
       // Create a link to download the image
-      const downloadLink = document.createElement("a");
+      let downloadLink = document.createElement("a");
       downloadLink.href = imgData;
       downloadLink.download = "my_prediction.png";
       downloadLink.click(); // Triggers a click on the link to initiate the download

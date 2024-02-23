@@ -1,4 +1,3 @@
-// Connect the audio file
 // Add an event listener to each element with the class 'btn'
 document.querySelectorAll(".btn-card").forEach(function (btn) {
   // Add the 'active' class when a button is clicked
@@ -19,6 +18,9 @@ function checkAllButtons() {
   var btnSave = document.getElementById("btn-save");
   var tableElement = document.getElementById("table");
 
+  const delayCardFlip = 1000; // Delay set to 1000ms to make the front card image disappear after the card rotation animation
+  const delayDownloadBtnAppears = delayCardFlip + 3000; // The delay is set taking into account the previous delay and the wave animation, which lasts for 3 seconds
+
   // Check if all buttons with class .btn have the 'active' class
   var allButtonsActive = Array.from(allButtons).every((btn) =>
     btn.classList.contains("active")
@@ -32,12 +34,12 @@ function checkAllButtons() {
     setTimeout(() => {
       toggleFontCard(true);
       tableElement.classList.add("wave-animation");
-    }, 1000); // Delay set to 1000ms to make the front card image disappear after the card rotation animation
+    }, delayCardFlip);
 
     setTimeout(() => {
       tableElement.classList.remove("wave-animation");
       btnSave.classList.remove("hidden");
-    }, 4000); // The delay is set taking into account the previous delay and the wave animation, which lasts for 3 seconds
+    }, delayDownloadBtnAppears);
   } else {
     btnSave.classList.add("hidden");
     toggleFontCard(false);
@@ -47,6 +49,5 @@ function checkAllButtons() {
 // Function to toggle the visibility of font cards based on the provided flag
 function toggleFontCard(flag) {
   var frontCards = document.querySelectorAll(".card-front");
-  console.log(flag);
   frontCards.forEach((frontCard) => frontCard.classList.toggle("hidden", flag));
 }

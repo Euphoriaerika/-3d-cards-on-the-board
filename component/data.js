@@ -25,26 +25,26 @@ function createAndAppendCards(cardData, num) {
   // Function for creating elements based on a template and populating them with data
   function createCardElement(cardId, cardText) {
     var cardContainer = document.createElement("div");
-    cardContainer.className = "btn btn-card";
+    cardContainer.classList.add("btn", "btn-card");
 
     var card = document.createElement("div");
-    card.className = "card";
+    card.classList.add("card");
 
     // Creating the front side of the card
     var cardFront = document.createElement("div");
-    cardFront.className = "card-front";
+    cardFront.classList.add("card-front");
     var cardFrontImage = document.createElement("img");
-    cardFrontImage.className = "icon";
+    cardFrontImage.classList.add("icon");
     cardFrontImage.src = "./image/cards/front.svg";
     cardFrontImage.alt = "prediction card";
     cardFront.appendChild(cardFrontImage);
 
     // Creating the back side of the card
     var cardBack = document.createElement("div");
-    cardBack.className = "card-back";
+    cardBack.classList.add("card-back");
     var cardBackImage = document.createElement("div");
     var cardBackIcon = document.createElement("img");
-    cardBackIcon.className = "icon";
+    cardBackIcon.classList.add("icon");
     cardBackIcon.src = "./image/cards/" + cardId + ".svg";
     cardBackIcon.alt = "prediction card";
     cardBackImage.appendChild(cardBackIcon);
@@ -73,7 +73,7 @@ function createAndAppendCards(cardData, num) {
   }
 
   var mainElement = document.getElementById("table");
-  Cards = randomСardGenerator(cardData, num);
+  let Cards = randomСardGenerator(cardData, num);
 
   // Append each card element to the main container
   Cards.forEach(function (cardId) {
